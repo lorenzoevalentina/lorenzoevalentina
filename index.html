@@ -160,13 +160,25 @@ var x = setInterval(function() {
   + minutes + "m " + seconds + "s ";*/
 
   // Display the result in the element with id="demo"
-   document.getElementById("demo").innerHTML = days + " giorni"
+  if(days>0) {
+        if(hours>6){
+            document.getElementById("demo").innerHTML = (days+1) + " giorni"
+         }else{
+            document.getElementById("demo").innerHTML = days + " giorni"
+            }
+  }else {
+    // If the count down is finished, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "0 giorni";
+    }else {
+        document.getElementById("demo").innerHTML = hours + "h "
+  + minutes + "m " + seconds + "s "
+        }
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "0 giorni";
-  }
+   }
+
+  
 }, 1000);
 </script>
 
