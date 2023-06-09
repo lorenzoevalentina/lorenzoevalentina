@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bentham">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair Display">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<style>
+body, html {
+  margin: 0;
+   font-family: "Bentham",serif;
+  color: #FFFFFF;
+  background-image: linear-gradient(15deg, #4181cd, #111);
+  /*background-color:#97c6fe;*/
+}
+
+h1{ /* link utili */
+    font-size: 5.3vh;
+     color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+/*font-family: "Bentham",serif;*/
+font-family: "Playfair Display";
+
+text-transform: uppercase;
+}
+
+h2{ /* attendiamo gentile conferma */
+    font-size: 2.1vh;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "Playfair Display";
+font-weight: bold;
+}
+
+h3{ /* Valentina e Lorenzo */
+    font-size: 3vh;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: trebuchet ms;
+font-weight: bold;
+    
+}
+
+
+a.ex1 {
+  padding-bottom: 2vh;
+  font-weight: bold;
+  color: #FFF;
+font-size: 2.5vh;
+  font-family: trebuchet ms;
+/*font-family: "Bentham",serif;*/
+  /*font-family: "Raleway";*/
+
+}
+
+
+a.ex1:link {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.ex1:visited {
+   background-color: transparent;
+  text-decoration: none;
+}
+
+a.ex1:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a.ex1:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+
+.container{
+  height:100vh;
+  width: 100vw;
+ }
+
+img {
+ height: auto;
+ max-width: 90%; 
+ max-height: 90%;
+ position: absolute;
+ margin: auto;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+
+}
+
+
+figcaption { /* scorrere in basso per maggiori dettagli*/
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translate(0, -2vh);
+    text-align: center;
+    font-size: 1.8vh;
+/*    font-family: trebuchet ms;*/
+font-family: "Playfair Display";
+text-transform: uppercase;
+}
+
+p{
+    
+    text-align: center;
+font-family: trebuchet ms;
+font-weight: bold;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    <img src="Invitation-2NoWaterMark.jpg">
+    <figcaption>Scorrere in basso per maggiori dettagli</figcaption>
+   
+</div>
+
+<!-- Display the countdown timer in an element -->
+<h1 style="font-size: 3vh;" ><br><br>Mancano:</h1><h3 id="demo" style="font-size: 6vh;"> </h3>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 10, 2023 10:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+/*  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";*/
+
+  // Display the result in the element with id="demo"
+  if(days>0) {
+        if(hours>6){
+            document.getElementById("demo").innerHTML = (days+1) + " giorni"
+         }else{
+            document.getElementById("demo").innerHTML = days + " giorni"
+            }
+  }else {
+    // If the count down is finished, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "0 giorni";
+    }else {
+        document.getElementById("demo").innerHTML = hours + "h "
+  + minutes + "m " + seconds + "s "
+        }
+
+   }
+
+  
+}, 1000);
+</script>
+
+<h1><br>Link Utili<br></h1>
+
+
+<p><a class="ex1" href="https://goo.gl/maps/E1LcvcmTMp2PD2a8A?coh=178573&entry=tt">Chiesa di Sant'Apollinare</a></p>
+<p><a class="ex1" href="https://lorenzoevalentina.github.io/Cronoscalata">Parcheggi e viabilità (NUOVE INFO IMPORTANTI)</a></p>
+<p><a class="ex1" href="https://goo.gl/maps/xy4Q23bznXbJyMYz5?coh=178573&entry=tt">Ristorante La Casina</a></p>
+<p><a class="ex1" href="http://uli.st/lorenzoevalentina">Lista viaggio di Nozze</a></p>
+<p><a class="ex1" style="color: #e3c82c" href="https://lorenzoevalentina.github.io/CschemaTavoliConInvitati_2.jpg">Mappa dei Tavoli</a></p>
+<br>
+<br>
+<br>
+<!-- <h2 style="text-transform: uppercase;">Attendiamo gentile conferma</h2>-->
+<h3>Valentina e Lorenzo</h3>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</body>
+</html>
